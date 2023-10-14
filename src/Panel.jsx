@@ -1,7 +1,7 @@
 import React from 'react';
 import Task from './Task';
 
-const Panel = ({ tasks, toggleFinished }) => {
+const Panel = ({ tasks, toggleFinished, editTask, isTaskEdit }) => {
   return (
     <div className="panel">
       {tasks &&
@@ -14,6 +14,8 @@ const Panel = ({ tasks, toggleFinished }) => {
               content={task.content}
               isComplete={task.isComplete}
               toggleFinished={toggleFinished}
+              editTask={editTask}
+              
             />
           );
         })}

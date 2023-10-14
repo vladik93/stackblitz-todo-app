@@ -25,7 +25,7 @@ const Button = ({
     <button
       className={`btn ${full ? 'btn--full' : ''} ${assignBtnType(type)}
 `}
-      onClick={() => clickEvent(objectId)}
+      onClick={(event) => clickEvent(event, objectId)}
     >
       {label}
     </button>

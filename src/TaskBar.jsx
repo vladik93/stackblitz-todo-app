@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import Button from './Button';
 
 const TaskBar = ({ addTask }) => {
   const [taskInput, setTaskInput] = useState({
@@ -31,7 +32,7 @@ const TaskBar = ({ addTask }) => {
   };
 
   return (
-    <form className="taskbar" onSubmit={handleSubmit}>
+    <form className="taskbar">
       <div className="row">
         <input
           type="text"
@@ -51,7 +52,7 @@ const TaskBar = ({ addTask }) => {
         />
       </div>
       <div className="row">
-        <button className="btn btn--full">Add Task</button>
+        <Button full label="Add Task" clickEvent={handleSubmit} />
       </div>
     </form>
   );
