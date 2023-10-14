@@ -1,7 +1,7 @@
 import React from 'react';
 import Button from './Button';
 
-const Task = ({ id, title, content, toggleFinished }) => {
+const Task = ({ id, title, content, isComplete, toggleFinished }) => {
   const trimText = (text, chars) => {
     let isTrimmed =
       text.length > chars ? text.substring(0, chars) + '...' : text;
@@ -15,13 +15,13 @@ const Task = ({ id, title, content, toggleFinished }) => {
 
   return (
     <div className="task">
-      <div className="task-row">
+      <div className="task-row" style={{textDecoration: isComplete ? 'line-through' : 'none'}}>
         <h2>{title}</h2>
         <p>{trimText(content, 50)}</p>
       </div>
       <div className="row">
         <Button
-          label="Finished"
+          label={isComplete ? "In Progress" : "Finished"}
           type="secondary"
           clickEvent={handleFinished}
           objectId={id}

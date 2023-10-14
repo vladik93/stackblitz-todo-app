@@ -12,6 +12,7 @@ const Panel = ({ tasks, toggleFinished }) => {
               id={index}
               title={task.title}
               content={task.content}
+              isComplete={task.isComplete}
               toggleFinished={toggleFinished}
             />
           );
