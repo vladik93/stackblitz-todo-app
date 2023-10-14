@@ -1,0 +1,84 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #333;
+}
+
+.taskbar {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  bottom: 0;
+  width: 100%;
+  padding: 2.4rem;
+  background-color: #ddd;
+}
+
+.row {
+  display: flex;
+  gap: 0.8rem;
+}
+
+.task-row{
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.input {
+  width: 100%;
+  padding: 1.6rem 0.8rem;
+  border-radius: 5px;
+  border: none;
+}
+
+.btn {
+  border-radius: 5px;
+  border: 1px solid #666;
+  flex: 1;
+  padding: 1.6rem 0.8rem;
+  
+}
+
+.btn--full {
+  width: 100%;
+}
+
+.btn--primary {
+  background: #666;
+  color: #fff;;
+}
+
+.btn--secondary {
+  background: none;
+}
+
+.panel {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.8rem;
+  padding: 0.8rem;
+}
+
+.task {
+  height: 180px;
+  padding: 0.8rem;
+  background-color: #eee;
+  border-radius: 5px;
+  box-shadow: 3px 5px 5px #ccc;
+  display: flex;
+  flex-direction: column;
+  flex-basis: 50%;
+  justify-content: space-between;
+}
